@@ -1,0 +1,59 @@
+ select * from eqmagnt_equipment_item_allocation where id_eqmagnt_equipment_item in( select id from eqmagnt_equipment_item where id_prscr_solicitation_equipment in 
+  (select id from prscr_solicitation_equipment where id_prscr_attendance=30))
+
+
+
+  select * from captation_attendance where id=322
+
+  select txt_full_name,* from captation_clinical_data where id_captation_attendance=322
+
+    select * from eqmagnt_equipment_item_allocation where id_eqmagnt_equipment_item in( select id from eqmagnt_equipment_item where id_prscr_solicitation_equipment in 
+  (select id from prscr_solicitation_equipment where id_prscr_attendance=265))
+
+  select id_eqmagnt_equipment_order, * from eqmagnt_link_equipment_order_allocation where id_eqmagnt_equipment_item_allocation in (select id from eqmagnt_equipment_item_allocation where id_eqmagnt_equipment_item in( select id from eqmagnt_equipment_item where id_prscr_solicitation_equipment in 
+  (select id from prscr_solicitation_equipment where id_prscr_attendance=265))) 
+
+
+  select  * from eqmagnt_equipment_order where id in (select id_eqmagnt_equipment_order from eqmagnt_link_equipment_order_allocation where id_eqmagnt_equipment_item_allocation in (select id from eqmagnt_equipment_item_allocation where id_eqmagnt_equipment_item in( select id from eqmagnt_equipment_item where id_prscr_solicitation_equipment in 
+  (select id from prscr_solicitation_equipment where id_prscr_attendance=265))) )
+
+
+  select * from eqmagnt_link_equipment_order_allocation where id_eqmagnt_equipment_item_allocation in ( select id from eqmagnt_equipment_item_allocation where id_eqmagnt_equipment_item in( select id from eqmagnt_equipment_item where id_prscr_solicitation_equipment in 
+  (select id from prscr_solicitation_equipment where id_prscr_attendance=265))) order by id_eqmagnt_equipment_order
+  
+  --order by id_eqmagnt_equipment_item_allocation 
+687
+688
+689
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    select * from eqmagnt_link_equipment_order_allocation where id_eqmagnt_equipment_item_allocation in ( select id from eqmagnt_equipment_item_allocation where id_eqmagnt_equipment_item in( select id from eqmagnt_equipment_item where id_prscr_solicitation_equipment in 
+  (select id from prscr_solicitation_equipment where id_prscr_attendance=30))) order by id_eqmagnt_equipment_item_allocation
+
+
+  select * from prctb_equipment where id in (
+  84,
+83,
+82,
+75,
+79,
+78,
+77,
+76,
+81,
+256,
+260,
+269,
+282)
